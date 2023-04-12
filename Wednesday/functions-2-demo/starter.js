@@ -121,3 +121,17 @@ inventoryDiscount(dogProducts.concat(catProducts), flatDiscount, 2, 50);
 ////////////////////////
 
 // CODE HERE
+const makeSandwich = (bread) => {
+  return (ingredients) => {
+    let order = `You ordered a ${bread} bread sandwich with`;
+    for(let i = 0; i < ingredients.length; i++) {
+      if(ingredients.length === 1) order += ` ${ingredients[i]}.`;
+      else if(i === ingredients.length - 1 && i !== 0) order += ` and ${ingredients[i]}.\n`;
+      else order += ` ${ingredients[i]},`;
+    }
+    return order;
+  }
+}
+
+const mySandwich = makeSandwich(`white`);
+console.log(mySandwich([`ham`, `vinegar dressing`,`bannana peppers`, `pepperoni`]));
