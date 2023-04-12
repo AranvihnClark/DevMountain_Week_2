@@ -94,11 +94,8 @@ function greeting(firstName, lastName, cb) {
 }
 
 // INVOKE 'GREETING FUNCTION' HERE
-function fullName(firstName, lastName) {
-    return console.log(`Hello, my full name is ${firstName} ${lastName}.\n`);
-}
 
-greeting(`Aranvihn`, `Clark`, fullName)
+greeting(`Aranvihn`, `Clark`, fullName = (firstName, lastName) => console.log(`Hello, my full name is ${firstName} ${lastName}.\n`));
 
 ////////// PROBLEM 4 //////////
 
@@ -133,7 +130,7 @@ Invoke the 'pricesPlusTax' function, passing in the 'prices' array and a callbac
 */
 
 // CODE HERE
-pricesPlusTax(prices, total);
+pricesPlusTax(prices, total = (arr) => console.log(`The new array plus tax = ${totalCost}.\n`));
 
 ////////// PROBLEM 5 //////////
 
